@@ -1,0 +1,43 @@
+{
+  "name": "solution",
+  "version": "1.0.0",
+  "description": "Solution25",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "alpinejs": "^3.3.2",
+    "autoprefixer": "^10.3.4",
+    "cross-env": "^7.0.3",
+    "jquery": "^3.6.0",
+    "laravel-mix": "^6.0.29",
+    "mix-tailwindcss": "^1.3.0",
+    "postcss": "^8.3.6",
+    "swiper": "^7.0.4",
+    "tailwindcss": "^2.2.14"
+  },
+  "scripts": {
+    "css": "npx tailwindcss build src/css/tailwind.css -o dist/css/application.css",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "theme:watch:dev": "theme watch --env=dev --allow-live",
+    "theme:download:dev": "theme download --env=dev --allow-live",
+    "theme:watch:prod": "theme watch --env=prod --allow-live",
+    "theme:download:prod": "theme download --env=prod --allow-live",
+    "browser-sync": "browser-sync start --config bs-config.js",
+    "start:dev": "concurrently \"npm run theme:watch:dev\" \"npm run watch\" \"npm run browser-sync\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardianthaqit/Solution25.git"
+  },
+  "author": "Solution25",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ardianthaqit/Solution25/issues"
+  },
+  "homepage": "https://github.com/ardianthaqit/Solution25#readme"
+}
